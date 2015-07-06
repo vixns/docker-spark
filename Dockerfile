@@ -7,7 +7,7 @@ ENV SPARK_PACKAGE $SPARK_VERSION-bin-hadoop$HADOOP_VERSION
 ENV SPARK_HOME /usr/spark-$SPARK_PACKAGE
 ENV PATH $PATH:$SPARK_HOME/bin
 RUN curl -sL --retry 3 \
-  "http://ftp.wayne.edu/apache/spark/spark-$SPARK_VERSION/spark-$SPARK_PACKAGE.tgz" \
+  "http://mirror.reverse.net/pub/apache/spark/spark-$SPARK_VERSION/spark-$SPARK_PACKAGE.tgz" \
   | gunzip \
   | tar x -C /usr/ \
   && ln -s $SPARK_HOME /usr/spark
