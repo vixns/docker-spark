@@ -26,5 +26,6 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF && \
 ENV MESOS_NATIVE_JAVA_LIBRARY=/usr/lib/libmesos.so
 
 EXPOSE 7077
+WORKDIR /usr/spark
 
 #CMD /usr/spark/bin/spark-class org.apache.spark.deploy.mesos.MesosClusterDispatcher 1
